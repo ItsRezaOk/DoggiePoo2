@@ -36,8 +36,8 @@ const OnboardingWizard = () => {
 
   const weeklyPricing = {
     '1-3': 35,
-    '4-6': 55,
-    '7+': 75
+    '4-5': 55,
+    '5+': 75
   };
   const extraVisitFee = 30;
 
@@ -45,9 +45,9 @@ const OnboardingWizard = () => {
     {
       id: 'weekly-basic',
       name: 'Weekly Basic',
-      price: formData.dogCount <= 3 ? 35 : formData.dogCount <= 6 ? 55 : 75,
+      price: formData.dogCount <= 3 ? 35 : formData.dogCount <= 5 ? 55 : 75,
       period: 'week',
-      description: `Perfect for ${formData.dogCount} dog${formData.dogCount > 1 ? 's' : ''}`,
+      description: `Perfect for ${formData.dogCount === 5 ? '5+' : formData.dogCount} dog${formData.dogCount > 1 ? 's' : ''}`,
       features: ['Weekly service', 'Basic cleanup', 'Eco-friendly disposal']
     },
     {
@@ -56,9 +56,9 @@ const OnboardingWizard = () => {
       price:
         (formData.dogCount <= 3
           ? weeklyPricing['1-3']
-          : formData.dogCount <= 6
-          ? weeklyPricing['4-6']
-          : weeklyPricing['7+']) + extraVisitFee,
+          : formData.dogCount <= 5
+          ? weeklyPricing['4-5']
+          : weeklyPricing['5+']) + extraVisitFee,
       period: 'week',
       description: 'Unlimited dogs, premium service',
       features: ['Twice-weekly service', 'Unlimited dogs', 'Deep sanitization', 'Free dispenser'],
@@ -211,17 +211,17 @@ const OnboardingWizard = () => {
                     -
                   </button>
                   <div className="text-4xl font-black text-[#4CAF50]">
-                    {formData.dogCount}
+                    {formData.dogCount === 5 ? '5+' : formData.dogCount}
                   </div>
                   <button
-                    onClick={() => updateFormData('dogCount', formData.dogCount + 1)}
+                    onClick={() => updateFormData('dogCount', Math.min(5, formData.dogCount + 1))}
                     className="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center"
                   >
                     +
                   </button>
                 </div>
                 <p className="text-gray-600 mb-6">
-                  {formData.dogCount} dog{formData.dogCount > 1 ? 's' : ''} selected
+                  {formData.dogCount === 5 ? '5+' : formData.dogCount} dog{formData.dogCount > 1 ? 's' : ''} selected
                 </p>
               </div>
 
@@ -327,7 +327,7 @@ const OnboardingWizard = () => {
                   </div>
                   <div className="flex justify-between">
                     <span>Dogs:</span>
-                    <span>{formData.dogCount}</span>
+                    <span>{formData.dogCount === 5 ? '5+' : formData.dogCount}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Plan:</span>
