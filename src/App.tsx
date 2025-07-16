@@ -14,6 +14,8 @@ import Footer from './components/Footer';
 import UrgencyRibbon from './components/UrgencyRibbon';
 import ExitIntentPopup from './components/ExitIntentPopup';
 import PawCursor from './components/PawCursor';
+import NavTabs from './components/NavTabs';
+import About from './components/About';
 
 function App() {
   const [showExitPopup, setShowExitPopup] = useState(false);
@@ -44,7 +46,9 @@ function App() {
     <div className="min-h-screen bg-[#FFF8F2] relative overflow-x-hidden">
       {showPawCursor && <PawCursor />}
       <UrgencyRibbon />
+      <NavTabs />
       <Hero />
+      <About />
       <ComicStrip />
       <HowItWorks />
       <InteractivePricing />
