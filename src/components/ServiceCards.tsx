@@ -153,9 +153,9 @@ const ServiceCards = () => {
                   {service.popular ? 'Choose Deluxe' : 'Select Plan'}
                 </button>
 
-                {/* Paw print decoration */}
+                {/* Decorative icon */}
                 <div className="absolute -bottom-2 -right-2 text-2xl opacity-20">
-                  🐾
+                  ✨
                 </div>
               </div>
             );

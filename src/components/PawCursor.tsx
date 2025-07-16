@@ -43,7 +43,7 @@ const PawCursor = () => {
       {trails.map((trail, index) => (
         <div
           key={trail.id}
-          className="absolute w-4 h-4 text-[#4CAF50] animate-ping"
+          className="absolute w-4 h-4 bg-[#4CAF50] rounded-full animate-ping"
           style={{
             left: trail.x - 8,
             top: trail.y - 8,
@@ -51,9 +51,7 @@ const PawCursor = () => {
             animationDelay: `${index * 100}ms`,
             animationDuration: '1s'
           }}
-        >
-          🐾
-        </div>
+        />
       ))}
     </div>
   );

@@ -191,16 +191,14 @@ const InteractivePricing = () => {
               {[...Array(20)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-4 h-4 animate-ping"
+                  className="absolute w-4 h-4 bg-[#4CAF50] rounded-full animate-ping"
                   style={{
                     left: `${Math.random() * 200 - 100}px`,
                     top: `${Math.random() * 200 - 100}px`,
                     animationDelay: `${Math.random() * 2}s`,
                     animationDuration: '1s'
                   }}
-                >
-                  🐾
-                </div>
+                />
               ))}
             </div>
           </div>
