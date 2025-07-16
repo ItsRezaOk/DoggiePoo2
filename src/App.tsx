@@ -6,7 +6,6 @@ import InteractivePricing from './components/InteractivePricing';
 import ServiceCards from './components/ServiceCards';
 import DeluxeSpotlight from './components/DeluxeSpotlight';
 import BeforeAfterGallery from './components/BeforeAfterGallery';
-import CustomerLove from './components/CustomerLove';
 import OnboardingWizard from './components/OnboardingWizard';
 import ReferralRewards from './components/ReferralRewards';
 import FAQ from './components/FAQ';
@@ -54,7 +53,6 @@ function App() {
       <ServiceCards />
       <DeluxeSpotlight />
       <BeforeAfterGallery />
-      <CustomerLove />
       <OnboardingWizard />
       <ReferralRewards />
       <FAQ />
