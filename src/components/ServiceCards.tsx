@@ -5,13 +5,13 @@ const ServiceCards = () => {
   const services = [
     {
       name: "Basic Weekly",
-      subtitle: "1-3 Dogs",
-      price: 35,
+      subtitle: "1 Dog",
+      price: 11.25,
       period: "week",
-      description: "Perfect for small households",
+      description: "Perfect for single pup households",
       features: [
         "Weekly waste removal",
-        "Up to 3 dogs",
+        "1 dog",
         "Basic yard cleanup",
         "Reliable service",
         "Eco-friendly disposal"
@@ -22,13 +22,13 @@ const ServiceCards = () => {
     },
     {
       name: "Standard Weekly",
-      subtitle: "4-5 Dogs",
-      price: 55,
+      subtitle: "2 Dogs",
+      price: 17.5,
       period: "week",
-      description: "Great for medium families",
+      description: "Ideal for two furry friends",
       features: [
         "Weekly waste removal",
-        "Up to 5 dogs",
+        "2 dogs",
         "Thorough yard cleanup",
         "Priority scheduling",
         "Eco-friendly disposal"
@@ -39,13 +39,13 @@ const ServiceCards = () => {
     },
     {
       name: "Premium Weekly",
-      subtitle: "5+ Dogs",
-      price: 75,
+      subtitle: "3+ Dogs",
+      price: 22.5,
       period: "week",
-      description: "For large dog families",
+      description: "For homes with three or more dogs",
       features: [
         "Weekly waste removal",
-        "5+ dogs covered",
+        "3+ dogs",
         "Deep yard sanitization",
         "Priority scheduling",
         "Eco-friendly disposal"
@@ -56,10 +56,10 @@ const ServiceCards = () => {
     },
     {
       name: "Twice-Weekly Deluxe",
-      subtitle: "Unlimited Dogs",
-      price: 65,
+      subtitle: "Add-On",
+      price: 8.75,
       period: "week",
-      description: "The ultimate convenience plan",
+      description: "Flat $35/month extra for a second visit",
       features: [
         "Twice-weekly premium service",
         "Unlimited dogs",

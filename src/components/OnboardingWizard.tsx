@@ -35,17 +35,25 @@ const OnboardingWizard = () => {
   ];
 
   const weeklyPricing = {
-    '1-3': 35,
-    '4-5': 55,
-    '5+': 75
+    1: 11.25,
+    2: 17.5,
+    3: 22.5,
+    4: 27.5,
+    5: 30
+  } as const;
+
+  const getWeeklyPrice = (dogs: number) => {
+    if (dogs >= 5) return weeklyPricing[5];
+    return weeklyPricing[dogs as keyof typeof weeklyPricing];
   };
-  const extraVisitFee = 30;
+
+  const extraVisitFee = 35 / 4; // $35 per month spread over 4 weeks
 
   const plans = [
     {
       id: 'weekly-basic',
       name: 'Weekly Basic',
-      price: formData.dogCount <= 3 ? 35 : formData.dogCount <= 5 ? 55 : 75,
+      price: getWeeklyPrice(formData.dogCount),
       period: 'week',
       description: `Perfect for ${formData.dogCount === 5 ? '5+' : formData.dogCount} dog${formData.dogCount > 1 ? 's' : ''}`,
       features: ['Weekly service', 'Basic cleanup', 'Eco-friendly disposal']
@@ -53,12 +61,7 @@ const OnboardingWizard = () => {
     {
       id: 'deluxe',
       name: 'Twice-Weekly Deluxe',
-      price:
-        (formData.dogCount <= 3
-          ? weeklyPricing['1-3']
-          : formData.dogCount <= 5
-          ? weeklyPricing['4-5']
-          : weeklyPricing['5+']) + extraVisitFee,
+      price: getWeeklyPrice(formData.dogCount) + extraVisitFee,
       period: 'week',
       description: 'Unlimited dogs, premium service',
       features: ['Twice-weekly service', 'Unlimited dogs', 'Deep sanitization', 'Free dispenser'],

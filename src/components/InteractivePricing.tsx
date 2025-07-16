@@ -8,18 +8,21 @@ const InteractivePricing = () => {
 
   // Pricing structure
   const weeklyPricing = {
-    '1-3': 35,
-    '4-5': 55,
-    '5+': 75
+    1: 11.25,
+    2: 17.5,
+    3: 22.5,
+    4: 27.5,
+    5: 30
+  } as const;
+
+  const getWeeklyPrice = (dogs: number) => {
+    if (dogs >= 5) return weeklyPricing[5];
+    return weeklyPricing[dogs as keyof typeof weeklyPricing];
   };
 
-  const extraVisitFee = 30; // Flat fee for second weekly visit
+  const extraVisitFee = 35 / 4; // Additional cost per week for Deluxe plan
 
-  const calculateWeeklyPrice = (dogs: number) => {
-    if (dogs <= 3) return weeklyPricing['1-3'];
-    if (dogs <= 5) return weeklyPricing['4-5'];
-    return weeklyPricing['5+'];
-  };
+  const calculateWeeklyPrice = (dogs: number) => getWeeklyPrice(dogs);
 
   const calculateTwiceWeeklyPrice = (dogs: number) => {
     return calculateWeeklyPrice(dogs) + extraVisitFee;
