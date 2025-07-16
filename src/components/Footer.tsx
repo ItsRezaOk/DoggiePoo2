@@ -5,9 +5,7 @@ const Footer = () => {
   return (
     <footer className="relative py-20 bg-gradient-to-r from-[#4CAF50] to-[#45a049] overflow-hidden">
       {/* Paw wave border */}
-      <div className="absolute top-0 left-0 right-0 h-8 bg-[#FFF8F2]">
-        <div className="absolute inset-0 bg-repeat-x bg-[url('data:image/svg+xml,%3Csvg width="40" height="32" viewBox="0 0 40 32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M20 16c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z" fill="%234CAF50" fill-opacity="0.3"/%3E%3C/svg%3E')]"></div>
-      </div>
+        <div className="absolute top-0 left-0 right-0 h-8 bg-[#FFF8F2]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main CTA */}
@@ -106,7 +104,6 @@ const Footer = () => {
       <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#FFD700] rounded-full opacity-10 transform translate-x-[-50%] translate-y-[50%]"></div>
       <div className="absolute top-0 right-0 w-24 h-24 bg-[#9DE5FF] rounded-full opacity-10 transform translate-x-[50%] translate-y-[-50%]"></div>
     </footer>
-  )
   );
 };
 
