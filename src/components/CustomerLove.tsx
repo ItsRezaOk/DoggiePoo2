@@ -96,7 +96,6 @@ const CustomerLove = () => {
   };
 
   const currentTest = testimonials[currentTestimonial];
-  const currentRev = reviews[currentReview];
 
   return (
     <section id="customer-love" className="py-20 bg-[#FFF8F2]">

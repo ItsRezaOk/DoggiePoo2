@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Gift, Users, Share2, Trophy } from 'lucide-react';
 
 const ReferralRewards = () => {
-  const [referralCode, setReferralCode] = useState('SCOOP-FRIEND-2024');
-  const [referralCount, setReferralCount] = useState(0);
+  const [referralCode] = useState('SCOOP-FRIEND-2024');
+  const [referralCount] = useState(0);
   const [showBadge, setShowBadge] = useState(false);
 
   const rewards = [

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DollarSign, TrendingUp, Star, Zap } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 
 const InteractivePricing = () => {
   const [dogCount, setDogCount] = useState(1);
