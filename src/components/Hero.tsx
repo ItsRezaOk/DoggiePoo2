@@ -68,24 +68,33 @@ const Hero = () => {
             >
               {/* Captain Scoop */}
               <div className="relative w-80 h-80 mx-auto mb-8">
-                <div className="absolute inset-0 bg-[#FFD700] rounded-full opacity-20 animate-ping"></div>
-                <div className="relative w-full h-full bg-white rounded-full shadow-2xl flex items-center justify-center">
+                <div
+                  className="absolute inset-0 bg-[#FFD700] opacity-20 animate-ping"
+                  style={{ clipPath: 'polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)' }}
+                />
+                <div
+                  className="relative w-full h-full bg-white shadow-2xl flex items-center justify-center"
+                  style={{ clipPath: 'polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)' }}
+                >
                   <div className="text-8xl">🦸‍♂️🐕</div>
-                  <div 
-                    className={`absolute -top-4 -right-4 w-16 h-16 bg-[#FF6B6B] rounded-full flex items-center justify-center text-2xl transition-transform duration-300 ${isWagging ? 'animate-bounce' : ''}`}
+                  <div
+                    className={`absolute -top-6 -right-6 w-16 h-16 bg-[#FF6B6B] flex items-center justify-center text-2xl transition-transform duration-300 ${isWagging ? 'animate-spin' : ''}`}
+                    style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}
                   >
                     🚀
                   </div>
                 </div>
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute -top-8 -left-8 w-16 h-16 bg-[#9DE5FF] rounded-full flex items-center justify-center text-2xl animate-bounce">
-                ✨
-              </div>
-              <div className="absolute -bottom-4 -right-8 w-12 h-12 bg-[#A8F483] rounded-full flex items-center justify-center text-xl animate-pulse">
-                ✨
-              </div>
+              {/* Geometric accents */}
+              <div
+                className="absolute -top-8 -left-8 w-12 h-12 bg-[#9DE5FF] opacity-70"
+                style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
+              />
+              <div
+                className="absolute -bottom-4 -right-8 w-10 h-10 bg-[#A8F483] opacity-70"
+                style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+              />
             </div>
 
             {/* Pristine yard visualization */}
@@ -110,7 +119,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-pulse">
         <ChevronDown size={32} className="text-white/80" />
       </div>
     </section>
