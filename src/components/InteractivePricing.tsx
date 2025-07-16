@@ -13,7 +13,7 @@ const InteractivePricing = () => {
     '7+': 75
   };
 
-  const deluxePrice = 89; // Bi-weekly flat rate
+  const extraVisitFee = 30; // Flat fee for second weekly visit
 
   const calculateWeeklyPrice = (dogs: number) => {
     if (dogs <= 3) return weeklyPricing['1-3'];
@@ -21,11 +21,16 @@ const InteractivePricing = () => {
     return weeklyPricing['7+'];
   };
 
+  const calculateTwiceWeeklyPrice = (dogs: number) => {
+    return calculateWeeklyPrice(dogs) + extraVisitFee;
+  };
+
   const calculateMonthlySavings = (dogs: number) => {
     const weeklyPrice = calculateWeeklyPrice(dogs);
-    const monthlyWeekly = weeklyPrice * 4;
-    const monthlyDeluxe = deluxePrice * 2;
-    return monthlyWeekly - monthlyDeluxe;
+    const twiceWeeklyPrice = calculateTwiceWeeklyPrice(dogs);
+    const monthlyStandardTwoVisits = weeklyPrice * 8;
+    const monthlyDeluxe = twiceWeeklyPrice * 4;
+    return monthlyStandardTwoVisits - monthlyDeluxe;
   };
 
   useEffect(() => {
@@ -111,20 +116,20 @@ const InteractivePricing = () => {
               </ul>
             </div>
 
-            {/* Bi-Weekly Deluxe */}
+            {/* Twice-Weekly Deluxe */}
             <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-2xl p-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-[#FF6B6B] text-white px-3 py-1 rounded-bl-lg text-sm font-bold">
                 POPULAR
               </div>
               
               <div className="text-center mb-4">
-                <h4 className="text-xl font-bold text-gray-800 mb-2">Bi-Weekly Deluxe</h4>
+                <h4 className="text-xl font-bold text-gray-800 mb-2">Twice-Weekly Deluxe</h4>
                 <div className="text-3xl font-black text-gray-800">
-                  ${deluxePrice}
-                  <span className="text-sm font-normal text-gray-600">/bi-weekly</span>
+                  ${calculateTwiceWeeklyPrice(dogCount)}
+                  <span className="text-sm font-normal text-gray-600">/week</span>
                 </div>
                 <p className="text-sm text-gray-600 mt-2">
-                  Monthly: ${deluxePrice * 2}
+                  Monthly: ${calculateTwiceWeeklyPrice(dogCount) * 4}
                 </p>
                 
                 {calculateMonthlySavings(dogCount) > 0 && (
@@ -137,7 +142,7 @@ const InteractivePricing = () => {
               <ul className="space-y-2 text-sm text-gray-800">
                 <li className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>
-                  Bi-weekly service
+                  Twice-weekly service
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>

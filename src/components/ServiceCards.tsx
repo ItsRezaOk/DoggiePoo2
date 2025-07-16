@@ -55,13 +55,13 @@ const ServiceCards = () => {
       popular: false
     },
     {
-      name: "Bi-Weekly Deluxe",
+      name: "Twice-Weekly Deluxe",
       subtitle: "Unlimited Dogs",
-      price: 89,
-      period: "bi-weekly",
+      price: 65,
+      period: "week",
       description: "The ultimate convenience plan",
       features: [
-        "Bi-weekly premium service",
+        "Twice-weekly premium service",
         "Unlimited dogs",
         "Deep sanitization",
         "Free waste bag dispenser",
