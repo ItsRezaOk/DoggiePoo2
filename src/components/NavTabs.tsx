@@ -9,7 +9,7 @@ const NavTabs = () => {
   ];
 
   return (
-    <nav className="sticky top-10 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
+    <nav className="sticky top-24 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ul className="flex justify-center gap-6 py-3">
           {tabs.map((tab) => (
