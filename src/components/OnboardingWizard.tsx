@@ -34,6 +34,13 @@ const OnboardingWizard = () => {
     }
   ];
 
+  const weeklyPricing = {
+    '1-3': 35,
+    '4-6': 55,
+    '7+': 75
+  };
+  const extraVisitFee = 30;
+
   const plans = [
     {
       id: 'weekly-basic',
@@ -45,11 +52,16 @@ const OnboardingWizard = () => {
     },
     {
       id: 'deluxe',
-      name: 'Bi-Weekly Deluxe',
-      price: 89,
-      period: 'bi-weekly',
+      name: 'Twice-Weekly Deluxe',
+      price:
+        (formData.dogCount <= 3
+          ? weeklyPricing['1-3']
+          : formData.dogCount <= 6
+          ? weeklyPricing['4-6']
+          : weeklyPricing['7+']) + extraVisitFee,
+      period: 'week',
       description: 'Unlimited dogs, premium service',
-      features: ['Bi-weekly service', 'Unlimited dogs', 'Deep sanitization', 'Free dispenser'],
+      features: ['Twice-weekly service', 'Unlimited dogs', 'Deep sanitization', 'Free dispenser'],
       popular: true
     }
   ];

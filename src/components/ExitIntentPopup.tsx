@@ -26,7 +26,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onClose }) => {
             Wait! Don't Leave Empty-Handed
           </h3>
           <p className="text-white/90">
-            Exclusive offer for Bi-Weekly Deluxe customers only!
+            Exclusive offer for Twice-Weekly Deluxe customers only!
           </p>
         </div>
 
@@ -38,7 +38,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onClose }) => {
               FREE Scented Waste-Bag Dispenser
             </h4>
             <p className="text-gray-600 text-sm">
-              Worth $25 - Yours free when you sign up for Bi-Weekly Deluxe today!
+              Worth $25 - Yours free when you sign up for Twice-Weekly Deluxe today!
             </p>
           </div>
 

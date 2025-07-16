@@ -37,7 +37,7 @@ const ComicStrip = () => {
       id: 5,
       image: "🥤",
       title: "The Reward",
-      caption: "Time to relax with Bi-Weekly Deluxe!",
+      caption: "Time to relax with Twice-Weekly Deluxe!",
       description: "Owner enjoys lemonade in clean yard"
     }
   ];
@@ -132,8 +132,8 @@ const ComicStrip = () => {
                         
                         {index === frames.length - 1 && (
                           <button className="group relative px-8 py-4 bg-[#4CAF50] hover:bg-[#45a049] text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                            <span className="relative z-10">Book Bi-Weekly Deluxe</span>
-                            <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                            <span className="relative z-10">Book Twice-Weekly Deluxe</span>
+                          <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
                           </button>
                         )}
                       </div>

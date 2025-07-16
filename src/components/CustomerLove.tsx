@@ -12,7 +12,7 @@ const CustomerLove = () => {
       name: "Sarah Johnson",
       location: "Denver, CO",
       dogs: 3,
-      plan: "Bi-Weekly Deluxe",
+      plan: "Twice-Weekly Deluxe",
       video: "🎥",
       quote: "Captain Scoop saved our sanity! With three golden retrievers, our yard was... well, let's just say it wasn't pristine. Now it's perfect!",
       rating: 5
@@ -32,7 +32,7 @@ const CustomerLove = () => {
       name: "Emma Rodriguez",
       location: "Phoenix, AZ",
       dogs: 5,
-      plan: "Bi-Weekly Deluxe",
+      plan: "Twice-Weekly Deluxe",
       video: "🎥",
       quote: "Five dogs = A LOT of cleanup. The Deluxe plan is worth every penny. Our yard has never looked better!",
       rating: 5
@@ -61,7 +61,7 @@ const CustomerLove = () => {
     {
       name: "David L.",
       rating: 5,
-      text: "Bi-Weekly Deluxe is perfect for our pack of 4. Consistent, professional service. 🎯",
+      text: "Twice-Weekly Deluxe is perfect for our pack of 4. Consistent, professional service. 🎯",
       date: "3 weeks ago"
     }
   ];
