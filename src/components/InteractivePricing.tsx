@@ -9,16 +9,16 @@ const InteractivePricing = () => {
   // Pricing structure
   const weeklyPricing = {
     '1-3': 35,
-    '4-6': 55,
-    '7+': 75
+    '4-5': 55,
+    '5+': 75
   };
 
   const extraVisitFee = 30; // Flat fee for second weekly visit
 
   const calculateWeeklyPrice = (dogs: number) => {
     if (dogs <= 3) return weeklyPricing['1-3'];
-    if (dogs <= 6) return weeklyPricing['4-6'];
-    return weeklyPricing['7+'];
+    if (dogs <= 5) return weeklyPricing['4-5'];
+    return weeklyPricing['5+'];
   };
 
   const calculateTwiceWeeklyPrice = (dogs: number) => {
@@ -65,7 +65,7 @@ const InteractivePricing = () => {
               How many dogs do you have?
             </h3>
             <div className="flex justify-center items-center gap-4 mb-6">
-              <span className="text-4xl font-black text-[#4CAF50]">{dogCount}</span>
+              <span className="text-4xl font-black text-[#4CAF50]">{dogCount === 5 ? '5+' : dogCount}</span>
               <span className="text-2xl">🐕</span>
             </div>
             
@@ -74,14 +74,14 @@ const InteractivePricing = () => {
               <input
                 type="range"
                 min="1"
-                max="10"
+                max="5"
                 value={dogCount}
-                onChange={(e) => setDogCount(parseInt(e.target.value))}
+                onChange={(e) => setDogCount(Math.min(5, parseInt(e.target.value)))}
                 className="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
               />
               <div className="flex justify-between text-sm text-gray-600 mt-2">
                 <span>1 dog</span>
-                <span>10+ dogs</span>
+                <span>5+ dogs</span>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@ const InteractivePricing = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  Up to {dogCount <= 3 ? '3' : dogCount <= 6 ? '6' : '10+'} dogs
+                  Up to {dogCount <= 3 ? '3' : '5+'} dogs
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>

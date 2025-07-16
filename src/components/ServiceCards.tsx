@@ -22,13 +22,13 @@ const ServiceCards = () => {
     },
     {
       name: "Standard Weekly",
-      subtitle: "4-6 Dogs",
+      subtitle: "4-5 Dogs",
       price: 55,
       period: "week",
       description: "Great for medium families",
       features: [
         "Weekly waste removal",
-        "Up to 6 dogs",
+        "Up to 5 dogs",
         "Thorough yard cleanup",
         "Priority scheduling",
         "Eco-friendly disposal"
@@ -39,13 +39,13 @@ const ServiceCards = () => {
     },
     {
       name: "Premium Weekly",
-      subtitle: "7+ Dogs",
+      subtitle: "5+ Dogs",
       price: 75,
       period: "week",
       description: "For large dog families",
       features: [
         "Weekly waste removal",
-        "7+ dogs covered",
+        "5+ dogs covered",
         "Deep yard sanitization",
         "Priority scheduling",
         "Eco-friendly disposal"
