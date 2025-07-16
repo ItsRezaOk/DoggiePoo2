@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Hero from './components/Hero';
 import ComicStrip from './components/ComicStrip';
 import HowItWorks from './components/HowItWorks';
@@ -18,11 +18,14 @@ import PawCursor from './components/PawCursor';
 function App() {
   const [showExitPopup, setShowExitPopup] = useState(false);
   const [showPawCursor, setShowPawCursor] = useState(false);
+  const exitPopupTriggeredRef = useRef(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (e.clientY <= 50) {
+      if (e.clientY <= 50 && !exitPopupTriggeredRef.current) {
         setShowExitPopup(true);
+        exitPopupTriggeredRef.current = true;
+        document.removeEventListener('mousemove', handleMouseMove);
       }
     };
 
