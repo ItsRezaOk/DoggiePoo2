@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ComicStrip = () => {
   const [currentFrame, setCurrentFrame] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const frames = [
     {
@@ -53,8 +52,6 @@ const ComicStrip = () => {
         
         if (targetFrame !== currentFrame && targetFrame < frames.length) {
           setCurrentFrame(targetFrame);
-          setIsAnimating(true);
-          setTimeout(() => setIsAnimating(false), 500);
         }
       }
     };
@@ -66,23 +63,17 @@ const ComicStrip = () => {
   const nextFrame = () => {
     if (currentFrame < frames.length - 1) {
       setCurrentFrame(currentFrame + 1);
-      setIsAnimating(true);
-      setTimeout(() => setIsAnimating(false), 500);
     }
   };
 
   const prevFrame = () => {
     if (currentFrame > 0) {
       setCurrentFrame(currentFrame - 1);
-      setIsAnimating(true);
-      setTimeout(() => setIsAnimating(false), 500);
     }
   };
 
   const goToFrame = (index: number) => {
     setCurrentFrame(index);
-    setIsAnimating(true);
-    setTimeout(() => setIsAnimating(false), 500);
   };
 
   return (

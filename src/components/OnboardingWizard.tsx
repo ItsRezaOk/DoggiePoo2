@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronRight, ChevronLeft, MapPin, Users, Calendar, CreditCard, Check } from 'lucide-react';
+import { ChevronRight, ChevronLeft, MapPin, Users, Calendar, Check } from 'lucide-react';
 
 const OnboardingWizard = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -39,6 +39,7 @@ const OnboardingWizard = () => {
       id: 'weekly-basic',
       name: 'Weekly Basic',
       price: formData.dogCount <= 3 ? 35 : formData.dogCount <= 6 ? 55 : 75,
+      period: 'week',
       description: `Perfect for ${formData.dogCount} dog${formData.dogCount > 1 ? 's' : ''}`,
       features: ['Weekly service', 'Basic cleanup', 'Eco-friendly disposal']
     },
@@ -46,6 +47,7 @@ const OnboardingWizard = () => {
       id: 'deluxe',
       name: 'Bi-Weekly Deluxe',
       price: 89,
+      period: 'bi-weekly',
       description: 'Unlimited dogs, premium service',
       features: ['Bi-weekly service', 'Unlimited dogs', 'Deep sanitization', 'Free dispenser'],
       popular: true
@@ -68,7 +70,7 @@ const OnboardingWizard = () => {
     }
   };
 
-  const updateFormData = (field: string, value: any) => {
+  const updateFormData = (field: string, value: string | number) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -233,9 +235,10 @@ const OnboardingWizard = () => {
                       <h4 className="font-bold text-lg text-gray-800 mb-2">
                         {plan.name}
                       </h4>
-                      <div className="text-2xl font-black text-gray-800 mb-2">
-                        ${plan.price}
-                      </div>
+                    <div className="text-2xl font-black text-gray-800 mb-2">
+                      ${plan.price}
+                      <span className="text-sm font-normal text-gray-600">/{plan.period}</span>
+                    </div>
                       <p className="text-sm text-gray-600 mb-4">
                         {plan.description}
                       </p>
@@ -319,8 +322,17 @@ const OnboardingWizard = () => {
                     <span>{plans.find(p => p.id === formData.plan)?.name}</span>
                   </div>
                   <div className="flex justify-between font-bold text-gray-800">
-                    <span>Total:</span>
-                    <span>${plans.find(p => p.id === formData.plan)?.price}</span>
+                    <span>Total (monthly):</span>
+                    <span>
+                      {
+                        (() => {
+                          const plan = plans.find(p => p.id === formData.plan);
+                          if (!plan) return '$0';
+                          const multiplier = plan.period === 'week' ? 4 : 2;
+                          return `$${plan.price * multiplier}`;
+                        })()
+                      }
+                    </span>
                   </div>
                 </div>
               </div>
