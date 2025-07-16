@@ -43,7 +43,7 @@ const CustomerLove = () => {
     {
       name: "Jennifer W.",
       rating: 5,
-      text: "Game changer for our family! Professional service and spotless results every time. 🐾",
+      text: "Game changer for our family! Professional service and spotless results every time.",
       date: "2 days ago"
     },
     {

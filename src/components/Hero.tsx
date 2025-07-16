@@ -81,7 +81,7 @@ const Hero = () => {
 
               {/* Floating elements */}
               <div className="absolute -top-8 -left-8 w-16 h-16 bg-[#9DE5FF] rounded-full flex items-center justify-center text-2xl animate-bounce">
-                🐾
+                ✨
               </div>
               <div className="absolute -bottom-4 -right-8 w-12 h-12 bg-[#A8F483] rounded-full flex items-center justify-center text-xl animate-pulse">
                 ✨
