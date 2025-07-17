@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { DollarSign } from 'lucide-react';
 
 const InteractivePricing = () => {
   const [dogCount, setDogCount] = useState(1);
   const [showConfetti, setShowConfetti] = useState(false);
-  const [savingsMeter, setSavingsMeter] = useState(0);
 
   // Pricing structure
   const weeklyPricing = {
@@ -38,14 +36,9 @@ const InteractivePricing = () => {
 
   useEffect(() => {
     const savings = calculateMonthlySavings(dogCount);
-    if (savings > 0) {
-      setSavingsMeter(Math.min(100, (savings / 50) * 100));
-      if (dogCount >= 4 && !showConfetti) {
-        setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 3000);
-      }
-    } else {
-      setSavingsMeter(0);
+    if (savings > 0 && dogCount >= 4 && !showConfetti) {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 3000);
     }
   }, [dogCount, showConfetti]);
 
@@ -163,33 +156,6 @@ const InteractivePricing = () => {
             </div>
           </div>
 
-          {/* Savings Meter */}
-          {dogCount >= 4 && (
-            <div className="mt-8 p-6 bg-gradient-to-r from-[#5B84B1] to-[#4A698B] rounded-2xl text-white">
-              <div className="text-center mb-4">
-                <h4 className="text-xl font-bold mb-2">💰 Savings Meter</h4>
-                <p className="text-sm opacity-90">
-                  Your {dogCount} pups make ~{dogCount * 0.75} lbs of waste weekly—Deluxe keeps it gone!
-                </p>
-              </div>
-              
-              <div className="relative bg-white/20 rounded-full h-6 overflow-hidden">
-                <div 
-                  className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#FFCF8B] to-[#F6B26B] transition-all duration-1000 ease-out flex items-center justify-end pr-2"
-                  style={{ width: `${savingsMeter}%` }}
-                >
-                  <DollarSign size={16} className="text-white" />
-                </div>
-              </div>
-              
-              <div className="text-center mt-4">
-                <button className="group relative px-8 py-3 bg-[#FFCF8B] hover:bg-[#F6B26B] text-gray-800 font-bold rounded-full transition-all duration-300 transform hover:scale-105">
-                  <span className="relative z-10">Upgrade to Deluxe</span>
-                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
-                </button>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Confetti Effect */}
