@@ -50,7 +50,7 @@ const InteractivePricing = () => {
   }, [dogCount, showConfetti]);
 
   return (
-    <section id="interactive-pricing" className="py-20 bg-gradient-to-br from-[#A8F483] to-[#4CAF50]">
+    <section id="interactive-pricing" className="py-20 bg-gradient-to-br from-[#BFD8E2] to-[#5B84B1]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
@@ -68,7 +68,7 @@ const InteractivePricing = () => {
               How many dogs do you have?
             </h3>
             <div className="flex justify-center items-center gap-4 mb-6">
-              <span className="text-4xl font-black text-[#4CAF50]">{dogCount === 5 ? '5+' : dogCount}</span>
+              <span className="text-4xl font-black text-[#5B84B1]">{dogCount === 5 ? '5+' : dogCount}</span>
               <span className="text-2xl">🐕</span>
             </div>
             
@@ -120,8 +120,8 @@ const InteractivePricing = () => {
             </div>
 
             {/* Twice-Weekly Deluxe */}
-            <div className="bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-2xl p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-[#FF6B6B] text-white px-3 py-1 rounded-bl-lg text-sm font-bold">
+            <div className="bg-gradient-to-br from-[#FFCF8B] to-[#F6B26B] rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-[#E27D60] text-white px-3 py-1 rounded-bl-lg text-sm font-bold">
                 POPULAR
               </div>
               
@@ -165,7 +165,7 @@ const InteractivePricing = () => {
 
           {/* Savings Meter */}
           {dogCount >= 4 && (
-            <div className="mt-8 p-6 bg-gradient-to-r from-[#4CAF50] to-[#45a049] rounded-2xl text-white">
+            <div className="mt-8 p-6 bg-gradient-to-r from-[#5B84B1] to-[#4A698B] rounded-2xl text-white">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold mb-2">💰 Savings Meter</h4>
                 <p className="text-sm opacity-90">
@@ -175,7 +175,7 @@ const InteractivePricing = () => {
               
               <div className="relative bg-white/20 rounded-full h-6 overflow-hidden">
                 <div 
-                  className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#FFD700] to-[#FFA500] transition-all duration-1000 ease-out flex items-center justify-end pr-2"
+                  className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#FFCF8B] to-[#F6B26B] transition-all duration-1000 ease-out flex items-center justify-end pr-2"
                   style={{ width: `${savingsMeter}%` }}
                 >
                   <DollarSign size={16} className="text-white" />
@@ -183,7 +183,7 @@ const InteractivePricing = () => {
               </div>
               
               <div className="text-center mt-4">
-                <button className="group relative px-8 py-3 bg-[#FFD700] hover:bg-[#FFA500] text-gray-800 font-bold rounded-full transition-all duration-300 transform hover:scale-105">
+                <button className="group relative px-8 py-3 bg-[#FFCF8B] hover:bg-[#F6B26B] text-gray-800 font-bold rounded-full transition-all duration-300 transform hover:scale-105">
                   <span className="relative z-10">Upgrade to Deluxe</span>
                   <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
                 </button>
@@ -199,7 +199,7 @@ const InteractivePricing = () => {
               {[...Array(20)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-4 h-4 bg-[#4CAF50] rounded-full animate-ping"
+                  className="absolute w-4 h-4 bg-[#5B84B1] rounded-full animate-ping"
                   style={{
                     left: `${Math.random() * 200 - 100}px`,
                     top: `${Math.random() * 200 - 100}px`,

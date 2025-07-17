@@ -18,7 +18,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onClose }) => {
         </button>
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#FFD700] to-[#FFA500] p-6 text-center">
+        <div className="bg-gradient-to-r from-[#FFCF8B] to-[#F6B26B] p-6 text-center">
           <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <Gift size={32} className="text-white" />
           </div>
@@ -45,19 +45,19 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onClose }) => {
           {/* Features */}
           <div className="space-y-3 mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-[#4CAF50] rounded-full flex items-center justify-center">
+              <div className="w-5 h-5 bg-[#5B84B1] rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-sm text-gray-700">Premium scented bags included</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-[#4CAF50] rounded-full flex items-center justify-center">
+              <div className="w-5 h-5 bg-[#5B84B1] rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-sm text-gray-700">Weather-resistant mounting</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-[#4CAF50] rounded-full flex items-center justify-center">
+              <div className="w-5 h-5 bg-[#5B84B1] rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
               <span className="text-sm text-gray-700">Unlimited dogs covered</span>
@@ -65,7 +65,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onClose }) => {
           </div>
 
           {/* Urgency */}
-          <div className="bg-[#FFD700] rounded-lg p-4 mb-6">
+          <div className="bg-[#FFCF8B] rounded-lg p-4 mb-6">
             <div className="flex items-center gap-2 justify-center">
               <Star size={16} className="text-gray-800" />
               <span className="text-sm font-bold text-gray-800">
@@ -75,7 +75,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onClose }) => {
           </div>
 
           {/* CTA */}
-          <button className="w-full py-3 bg-gradient-to-r from-[#4CAF50] to-[#45a049] hover:from-[#45a049] hover:to-[#4CAF50] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105">
+          <button className="w-full py-3 bg-gradient-to-r from-[#5B84B1] to-[#4A698B] hover:from-[#4A698B] hover:to-[#5B84B1] text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105">
             Claim My Free Dispenser + Start Deluxe
           </button>
           

@@ -10,19 +10,19 @@ const HowItWorks = () => {
       icon: Calendar,
       title: "Book",
       description: "Choose your plan and schedule in under 60 seconds",
-      color: "from-[#FFD700] to-[#FFA500]"
+      color: "from-[#FFCF8B] to-[#F6B26B]"
     },
     {
       icon: Truck,
       title: "Scoop",
       description: "Our certified crew arrives and transforms your yard",
-      color: "from-[#4CAF50] to-[#45a049]"
+      color: "from-[#5B84B1] to-[#4A698B]"
     },
     {
       icon: Smile,
       title: "Smile",
       description: "Enjoy your pristine, poop-free paradise",
-      color: "from-[#00B4FF] to-[#0099CC]"
+      color: "from-[#88B0BF] to-[#7EB7DF]"
     }
   ];
 
@@ -76,7 +76,7 @@ const HowItWorks = () => {
           <div className="absolute top-1/2 left-0 right-0 h-2 transform -translate-y-1/2">
             <div className="relative h-full bg-gray-200 rounded-full overflow-hidden">
               <div 
-                className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#FFD700] via-[#4CAF50] to-[#00B4FF] transition-all duration-1000 ease-out"
+                className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#FFCF8B] via-[#5B84B1] to-[#88B0BF] transition-all duration-1000 ease-out"
                 style={{ width: `${pathProgress}%` }}
               />
             </div>
@@ -130,13 +130,13 @@ const HowItWorks = () => {
           </div>
 
           {/* Decorative elements */}
-          <div className="absolute -top-8 left-1/4 w-16 h-16 bg-[#A8F483] rounded-full opacity-20 animate-pulse" />
-          <div className="absolute -bottom-8 right-1/4 w-12 h-12 bg-[#9DE5FF] rounded-full opacity-20 animate-bounce" />
+          <div className="absolute -top-8 left-1/4 w-16 h-16 bg-[#BFD8E2] rounded-full opacity-20 animate-pulse" />
+          <div className="absolute -bottom-8 right-1/4 w-12 h-12 bg-[#D0E5F2] rounded-full opacity-20 animate-bounce" />
         </div>
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-[#4CAF50] to-[#45a049] hover:from-[#45a049] hover:to-[#4CAF50] text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+          <button className="group relative px-8 py-4 bg-gradient-to-r from-[#5B84B1] to-[#4A698B] hover:from-[#4A698B] hover:to-[#5B84B1] text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
             <span className="relative z-10">Start Your Service</span>
             <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
           </button>

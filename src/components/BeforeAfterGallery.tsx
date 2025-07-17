@@ -44,7 +44,7 @@ const BeforeAfterGallery = () => {
   };
 
   return (
-    <section id="before-after-gallery" className="py-20 bg-gradient-to-br from-[#9DE5FF] to-[#00B4FF]">
+    <section id="before-after-gallery" className="py-20 bg-gradient-to-br from-[#D0E5F2] to-[#88B0BF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
@@ -69,7 +69,7 @@ const BeforeAfterGallery = () => {
                   </div>
 
                   {/* Before/After Slider */}
-                  <div className="relative h-64 bg-gradient-to-r from-[#A8F483] to-[#4CAF50] rounded-2xl overflow-hidden">
+                  <div className="relative h-64 bg-gradient-to-r from-[#BFD8E2] to-[#5B84B1] rounded-2xl overflow-hidden">
                     {/* Before side */}
                     <div 
                       className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-6xl transition-all duration-300"
@@ -85,7 +85,7 @@ const BeforeAfterGallery = () => {
 
                     {/* After side */}
                     <div 
-                      className="absolute inset-0 bg-gradient-to-br from-[#4CAF50] to-[#45a049] flex items-center justify-center text-6xl transition-all duration-300"
+                      className="absolute inset-0 bg-gradient-to-br from-[#5B84B1] to-[#4A698B] flex items-center justify-center text-6xl transition-all duration-300"
                       style={{ 
                         clipPath: `polygon(${sliderPositions[index]}% 0, 100% 0, 100% 100%, ${sliderPositions[index]}% 100%)` 
                       }}
@@ -102,7 +102,7 @@ const BeforeAfterGallery = () => {
                       style={{ left: `${sliderPositions[index]}%` }}
                     >
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
-                        <div className="w-4 h-4 bg-[#4CAF50] rounded-full"></div>
+                        <div className="w-4 h-4 bg-[#5B84B1] rounded-full"></div>
                       </div>
                     </div>
 

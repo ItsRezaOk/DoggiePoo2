@@ -16,7 +16,7 @@ const ServiceCards = () => {
         "Reliable service",
         "Eco-friendly disposal"
       ],
-      color: "from-[#9DE5FF] to-[#00B4FF]",
+      color: "from-[#D0E5F2] to-[#88B0BF]",
       icon: Check,
       popular: false
     },
@@ -33,7 +33,7 @@ const ServiceCards = () => {
         "Priority scheduling",
         "Eco-friendly disposal"
       ],
-      color: "from-[#A8F483] to-[#4CAF50]",
+      color: "from-[#BFD8E2] to-[#5B84B1]",
       icon: Star,
       popular: false
     },
@@ -50,7 +50,7 @@ const ServiceCards = () => {
         "Priority scheduling",
         "Eco-friendly disposal"
       ],
-      color: "from-[#FFD700] to-[#FFA500]",
+      color: "from-[#FFCF8B] to-[#F6B26B]",
       icon: Zap,
       popular: false
     },
@@ -68,7 +68,7 @@ const ServiceCards = () => {
         "Priority support",
         "Satisfaction guarantee"
       ],
-      color: "from-[#FF6B6B] to-[#FF4444]",
+      color: "from-[#E27D60] to-[#C85A5A]",
       icon: Crown,
       popular: true,
       glow: true
@@ -101,7 +101,7 @@ const ServiceCards = () => {
                 {/* Popular badge */}
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-[#FF6B6B] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                    <div className="bg-[#E27D60] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                       MOST POPULAR
                     </div>
                   </div>
@@ -136,7 +136,7 @@ const ServiceCards = () => {
                 <div className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <div className="w-5 h-5 bg-[#4CAF50] rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-5 h-5 bg-[#5B84B1] rounded-full flex items-center justify-center flex-shrink-0">
                         <Check size={12} className="text-white" />
                       </div>
                       <span className="text-sm text-gray-700">{feature}</span>
@@ -147,7 +147,7 @@ const ServiceCards = () => {
                 {/* CTA Button */}
                 <button className={`w-full py-3 px-6 rounded-full font-bold text-sm transition-all duration-300 transform hover:scale-105 ${
                   service.popular
-                    ? 'bg-gradient-to-r from-[#FF6B6B] to-[#FF4444] text-white shadow-lg hover:shadow-xl'
+                    ? 'bg-gradient-to-r from-[#E27D60] to-[#C85A5A] text-white shadow-lg hover:shadow-xl'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-800'
                 }`}>
                   {service.popular ? 'Choose Deluxe' : 'Select Plan'}
@@ -167,7 +167,7 @@ const ServiceCards = () => {
           <p className="text-lg text-gray-600 mb-6">
             Not sure which plan is right for you?
           </p>
-          <button className="group relative px-8 py-4 bg-[#4CAF50] hover:bg-[#45a049] text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+          <button className="group relative px-8 py-4 bg-[#5B84B1] hover:bg-[#4A698B] text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
             <span className="relative z-10">Get Personalized Recommendation</span>
             <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
           </button>

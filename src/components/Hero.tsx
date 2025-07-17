@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#A8F483] via-[#4CAF50] to-[#00B4FF]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#BFD8E2] via-[#5B84B1] to-[#88B0BF]">
         <div className="absolute inset-0 bg-white/20 opacity-20 animate-pulse"></div>
       </div>
 
@@ -38,7 +38,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight">
                 Never Step in It
-                <span className="block text-[#FFD700] drop-shadow-lg">Again.</span>
+                <span className="block text-[#FFCF8B] drop-shadow-lg">Again.</span>
               </h1>
               <p className="text-xl sm:text-2xl text-white/90 max-w-2xl">
                 Leave the doo to our crew! Professional dog waste removal that keeps your yard pristine and your paws clean.
@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="group relative px-8 py-4 bg-[#FFD700] hover:bg-[#FFC107] text-black font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <button className="group relative px-8 py-4 bg-[#FFCF8B] hover:bg-[#E7B75F] text-black font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                 <span className="relative z-10">Start My Plan</span>
                 <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
               </button>
@@ -69,7 +69,7 @@ const Hero = () => {
               {/* Captain Scoop */}
               <div className="relative w-80 h-80 mx-auto mb-8">
                 <div
-                  className="absolute inset-0 bg-[#FFD700] opacity-20 animate-ping"
+                  className="absolute inset-0 bg-[#FFCF8B] opacity-20 animate-ping"
                   style={{ clipPath: 'polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)' }}
                 />
                 <div
@@ -78,7 +78,7 @@ const Hero = () => {
                 >
                   <div className="text-8xl">🦸‍♂️🐕</div>
                   <div
-                    className={`absolute -top-6 -right-6 w-16 h-16 bg-[#FF6B6B] flex items-center justify-center text-2xl transition-transform duration-300 ${isWagging ? 'animate-spin' : ''}`}
+                    className={`absolute -top-6 -right-6 w-16 h-16 bg-[#E27D60] flex items-center justify-center text-2xl transition-transform duration-300 ${isWagging ? 'animate-spin' : ''}`}
                     style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}
                   >
                     🚀
@@ -88,11 +88,11 @@ const Hero = () => {
 
               {/* Geometric accents */}
               <div
-                className="absolute -top-8 -left-8 w-12 h-12 bg-[#9DE5FF] opacity-70"
+                className="absolute -top-8 -left-8 w-12 h-12 bg-[#D0E5F2] opacity-70"
                 style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
               />
               <div
-                className="absolute -bottom-4 -right-8 w-10 h-10 bg-[#A8F483] opacity-70"
+                className="absolute -bottom-4 -right-8 w-10 h-10 bg-[#BFD8E2] opacity-70"
                 style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
               />
             </div>
@@ -100,7 +100,7 @@ const Hero = () => {
             {/* Pristine yard visualization */}
             <div className="mt-8 p-6 bg-white/90 rounded-3xl backdrop-blur-sm shadow-xl">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-[#4CAF50] rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#5B84B1] rounded-full flex items-center justify-center">
                   <span className="text-white font-bold">✓</span>
                 </div>
                 <div>
@@ -109,9 +109,9 @@ const Hero = () => {
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-2">
-                <div className="h-12 bg-[#4CAF50] rounded-lg flex items-center justify-center">🌱</div>
-                <div className="h-12 bg-[#A8F483] rounded-lg flex items-center justify-center">🌿</div>
-                <div className="h-12 bg-[#4CAF50] rounded-lg flex items-center justify-center">🌱</div>
+                <div className="h-12 bg-[#5B84B1] rounded-lg flex items-center justify-center">🌱</div>
+                <div className="h-12 bg-[#BFD8E2] rounded-lg flex items-center justify-center">🌿</div>
+                <div className="h-12 bg-[#5B84B1] rounded-lg flex items-center justify-center">🌱</div>
               </div>
             </div>
           </div>

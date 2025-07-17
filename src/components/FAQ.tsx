@@ -74,11 +74,11 @@ const FAQ = () => {
                   className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#4CAF50] to-[#45a049] rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#5B84B1] to-[#4A698B] rounded-full flex items-center justify-center">
                       <Icon size={20} className="text-white" />
                     </div>
                     <div>
-                      <span className="inline-block px-3 py-1 bg-[#A8F483] text-[#4CAF50] text-xs font-bold rounded-full mb-1">
+                      <span className="inline-block px-3 py-1 bg-[#BFD8E2] text-[#5B84B1] text-xs font-bold rounded-full mb-1">
                         {faq.category}
                       </span>
                       <h3 className="text-lg font-bold text-gray-800">
@@ -115,7 +115,7 @@ const FAQ = () => {
 
         {/* Contact CTA */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-[#4CAF50] to-[#45a049] rounded-3xl p-8 text-white">
+          <div className="bg-gradient-to-r from-[#5B84B1] to-[#4A698B] rounded-3xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Still have questions?
             </h3>
@@ -123,7 +123,7 @@ const FAQ = () => {
               We're here to help! Our friendly team is ready to answer any questions about our service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-white text-[#4CAF50] font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
+              <button className="px-8 py-3 bg-white text-[#5B84B1] font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
                 Chat with Us
               </button>
               <button className="px-8 py-3 bg-white/20 text-white font-bold rounded-full hover:bg-white/30 transition-all duration-300">
