@@ -3,7 +3,6 @@ import { DollarSign } from 'lucide-react';
 
 const InteractivePricing = () => {
   const [dogCount, setDogCount] = useState(1);
-  const [showConfetti, setShowConfetti] = useState(false);
   const [savingsMeter, setSavingsMeter] = useState(0);
 
   // Pricing structure
@@ -40,14 +39,10 @@ const InteractivePricing = () => {
     const savings = calculateMonthlySavings(dogCount);
     if (savings > 0) {
       setSavingsMeter(Math.min(100, (savings / 50) * 100));
-      if (dogCount >= 4 && !showConfetti) {
-        setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 3000);
-      }
     } else {
       setSavingsMeter(0);
     }
-  }, [dogCount, showConfetti]);
+  }, [dogCount]);
 
   return (
     <section id="interactive-pricing" className="py-20 bg-gradient-to-br from-[#BFD8E2] to-[#5B84B1]">
@@ -192,25 +187,7 @@ const InteractivePricing = () => {
           )}
         </div>
 
-        {/* Confetti Effect */}
-        {showConfetti && (
-          <div className="fixed inset-0 pointer-events-none z-50">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              {[...Array(20)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-4 h-4 bg-[#5B84B1] rounded-full animate-ping"
-                  style={{
-                    left: `${Math.random() * 200 - 100}px`,
-                    top: `${Math.random() * 200 - 100}px`,
-                    animationDelay: `${Math.random() * 2}s`,
-                    animationDuration: '1s'
-                  }}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+        {/* Confetti effect removed for accessibility */}
       </div>
     </section>
   );
