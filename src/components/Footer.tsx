@@ -3,7 +3,7 @@ import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="relative py-20 bg-gradient-to-r from-[#4CAF50] to-[#45a049] overflow-hidden">
+    <footer className="relative py-20 bg-gradient-to-r from-[#5B84B1] to-[#4A698B] overflow-hidden">
       {/* Paw wave border */}
         <div className="absolute top-0 left-0 right-0 h-8 bg-[#FFF8F2]"></div>
 
@@ -16,7 +16,7 @@ const Footer = () => {
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Join hundreds of happy customers who never worry about yard cleanup again
           </p>
-          <button className="group relative px-8 py-4 bg-[#FFD700] hover:bg-[#FFA500] text-gray-800 font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+          <button className="group relative px-8 py-4 bg-[#FFCF8B] hover:bg-[#F6B26B] text-gray-800 font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             <span className="relative z-10">Start Your Service Today</span>
             <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
           </button>
@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Company info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-16 h-16 bg-[#FFD700] rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-[#FFCF8B] rounded-full flex items-center justify-center">
                 <span className="text-2xl">🦸‍♂️</span>
               </div>
               <div>
@@ -101,8 +101,8 @@ const Footer = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#FFD700] rounded-full opacity-10 transform translate-x-[-50%] translate-y-[50%]"></div>
-      <div className="absolute top-0 right-0 w-24 h-24 bg-[#9DE5FF] rounded-full opacity-10 transform translate-x-[50%] translate-y-[-50%]"></div>
+      <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#FFCF8B] rounded-full opacity-10 transform translate-x-[-50%] translate-y-[50%]"></div>
+      <div className="absolute top-0 right-0 w-24 h-24 bg-[#D0E5F2] rounded-full opacity-10 transform translate-x-[50%] translate-y-[-50%]"></div>
     </footer>
   );
 };

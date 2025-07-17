@@ -118,7 +118,7 @@ const CustomerLove = () => {
             
             <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
               {/* Video placeholder */}
-              <div className="relative h-64 bg-gradient-to-br from-[#4CAF50] to-[#45a049] flex items-center justify-center">
+              <div className="relative h-64 bg-gradient-to-br from-[#5B84B1] to-[#4A698B] flex items-center justify-center">
                 <div className="text-center text-white">
                   <div className="text-6xl mb-4">{currentTest.video}</div>
                   <button className="flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 backdrop-blur-sm">
@@ -131,7 +131,7 @@ const CustomerLove = () => {
               {/* Testimonial content */}
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#FFCF8B] to-[#F6B26B] rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-lg">
                       {currentTest.name.charAt(0)}
                     </span>
@@ -150,7 +150,7 @@ const CustomerLove = () => {
                         size={16}
                         className={`${
                           starAnimation ? 'animate-pulse' : ''
-                        } text-[#FFD700] fill-current`}
+                        } text-[#FFCF8B] fill-current`}
                       />
                     ))}
                   </div>
@@ -160,7 +160,7 @@ const CustomerLove = () => {
                 </div>
 
                 <div className="relative">
-                  <Quote size={24} className="absolute -top-2 -left-2 text-[#4CAF50] opacity-50" />
+                  <Quote size={24} className="absolute -top-2 -left-2 text-[#5B84B1] opacity-50" />
                   <p className="text-gray-700 leading-relaxed pl-6">
                     {currentTest.quote}
                   </p>
@@ -185,7 +185,7 @@ const CustomerLove = () => {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentTestimonial 
-                        ? 'bg-[#4CAF50] scale-125' 
+                        ? 'bg-[#5B84B1] scale-125' 
                         : 'bg-gray-300'
                     }`}
                   />
@@ -214,13 +214,13 @@ const CustomerLove = () => {
                   key={index}
                   className={`bg-white rounded-2xl p-6 shadow-lg transition-all duration-500 ${
                     index === currentReview 
-                      ? 'scale-105 border-2 border-[#4CAF50]' 
+                      ? 'scale-105 border-2 border-[#5B84B1]' 
                       : 'scale-100 opacity-80'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#A8F483] to-[#4CAF50] rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#BFD8E2] to-[#5B84B1] rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-sm">
                           {review.name.charAt(0)}
                         </span>
@@ -236,7 +236,7 @@ const CustomerLove = () => {
                         <Star
                           key={i}
                           size={14}
-                          className="text-[#FFD700] fill-current"
+                          className="text-[#FFCF8B] fill-current"
                         />
                       ))}
                     </div>
@@ -250,7 +250,7 @@ const CustomerLove = () => {
             </div>
 
             {/* Overall rating */}
-            <div className="bg-gradient-to-r from-[#4CAF50] to-[#45a049] rounded-2xl p-6 text-white text-center">
+            <div className="bg-gradient-to-r from-[#5B84B1] to-[#4A698B] rounded-2xl p-6 text-white text-center">
               <div className="text-3xl font-black mb-2">4.9 ⭐</div>
               <p className="text-sm opacity-90">Average rating from 500+ customers</p>
               <div className="mt-4 flex justify-center">
@@ -259,7 +259,7 @@ const CustomerLove = () => {
                     <Star
                       key={i}
                       size={20}
-                      className="text-[#FFD700] fill-current"
+                      className="text-[#FFCF8B] fill-current"
                     />
                   ))}
                 </div>

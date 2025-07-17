@@ -52,7 +52,7 @@ const ReferralRewards = () => {
   };
 
   return (
-    <section id="referral-rewards" className="py-20 bg-gradient-to-br from-[#FFD700] to-[#FFA500]">
+    <section id="referral-rewards" className="py-20 bg-gradient-to-br from-[#FFCF8B] to-[#F6B26B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
@@ -67,7 +67,7 @@ const ReferralRewards = () => {
           {/* Referral Dashboard */}
           <div className="bg-white rounded-3xl shadow-2xl p-8">
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#4CAF50] to-[#45a049] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#5B84B1] to-[#4A698B] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users size={32} className="text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
@@ -92,7 +92,7 @@ const ReferralRewards = () => {
                 />
                 <button
                   onClick={handleShare}
-                  className="px-6 py-3 bg-[#4CAF50] hover:bg-[#45a049] text-white rounded-lg font-bold transition-all duration-300 flex items-center gap-2"
+                  className="px-6 py-3 bg-[#5B84B1] hover:bg-[#4A698B] text-white rounded-lg font-bold transition-all duration-300 flex items-center gap-2"
                 >
                   <Share2 size={20} />
                   Share
@@ -107,13 +107,13 @@ const ReferralRewards = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-gradient-to-br from-[#A8F483] to-[#4CAF50] rounded-2xl p-4 text-center">
+              <div className="bg-gradient-to-br from-[#BFD8E2] to-[#5B84B1] rounded-2xl p-4 text-center">
                 <div className="text-2xl font-black text-white mb-1">
                   {referralCount}
                 </div>
                 <p className="text-white/90 text-sm">Friends Referred</p>
               </div>
-              <div className="bg-gradient-to-br from-[#9DE5FF] to-[#00B4FF] rounded-2xl p-4 text-center">
+              <div className="bg-gradient-to-br from-[#D0E5F2] to-[#88B0BF] rounded-2xl p-4 text-center">
                 <div className="text-2xl font-black text-white mb-1">
                   ${referralCount * 25}
                 </div>
@@ -123,7 +123,7 @@ const ReferralRewards = () => {
 
             {/* CTA */}
             <div className="text-center">
-              <button className="w-full py-3 bg-gradient-to-r from-[#FFD700] to-[#FFA500] hover:from-[#FFA500] hover:to-[#FFD700] text-gray-800 font-bold rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="w-full py-3 bg-gradient-to-r from-[#FFCF8B] to-[#F6B26B] hover:from-[#F6B26B] hover:to-[#FFCF8B] text-gray-800 font-bold rounded-lg transition-all duration-300 transform hover:scale-105">
                 Invite Friends Now
               </button>
             </div>
@@ -132,7 +132,7 @@ const ReferralRewards = () => {
           {/* Rewards Track */}
           <div className="bg-white rounded-3xl shadow-2xl p-8">
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#FF6B6B] to-[#FF4444] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#E27D60] to-[#C85A5A] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Trophy size={32} className="text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
@@ -149,7 +149,7 @@ const ReferralRewards = () => {
                   key={index}
                   className={`relative flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 ${
                     reward.earned
-                      ? 'bg-gradient-to-r from-[#4CAF50] to-[#45a049] text-white'
+                      ? 'bg-gradient-to-r from-[#5B84B1] to-[#4A698B] text-white'
                       : 'bg-gray-50 text-gray-600'
                   }`}
                 >
@@ -176,7 +176,7 @@ const ReferralRewards = () => {
                   </div>
                   
                   {reward.earned && (
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#FFD700] rounded-full flex items-center justify-center">
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#FFCF8B] rounded-full flex items-center justify-center">
                       <span className="text-xs">✓</span>
                     </div>
                   )}
@@ -191,7 +191,7 @@ const ReferralRewards = () => {
               </p>
               <div className="bg-gray-200 rounded-full h-2 overflow-hidden">
                 <div 
-                  className="bg-gradient-to-r from-[#4CAF50] to-[#45a049] h-full transition-all duration-500"
+                  className="bg-gradient-to-r from-[#5B84B1] to-[#4A698B] h-full transition-all duration-500"
                   style={{ 
                     width: `${Math.min(100, (referralCount / (rewards.find(r => !r.earned)?.referrals || 10)) * 100)}%` 
                   }}

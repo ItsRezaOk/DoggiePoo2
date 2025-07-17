@@ -92,7 +92,7 @@ const OnboardingWizard = () => {
   const progress = (currentStep / 3) * 100;
 
   return (
-    <section id="onboarding-wizard" className="py-20 bg-gradient-to-br from-[#A8F483] to-[#4CAF50]">
+    <section id="onboarding-wizard" className="py-20 bg-gradient-to-br from-[#BFD8E2] to-[#5B84B1]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
@@ -115,9 +115,9 @@ const OnboardingWizard = () => {
                 <div key={step.id} className="flex flex-col items-center">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
                     isCompleted 
-                      ? 'bg-[#FFD700] text-gray-800' 
+                      ? 'bg-[#FFCF8B] text-gray-800' 
                       : isActive 
-                        ? 'bg-white text-[#4CAF50]' 
+                        ? 'bg-white text-[#5B84B1]' 
                         : 'bg-white/30 text-white'
                   }`}>
                     {isCompleted ? <Check size={24} /> : <Icon size={24} />}
@@ -134,7 +134,7 @@ const OnboardingWizard = () => {
           {/* Progress bone */}
           <div className="relative h-4 bg-white/20 rounded-full overflow-hidden">
             <div 
-              className="absolute top-0 left-0 h-full bg-[#FFD700] transition-all duration-500 ease-out"
+              className="absolute top-0 left-0 h-full bg-[#FFCF8B] transition-all duration-500 ease-out"
               style={{ width: `${progress}%` }}
             />
             <div className="absolute inset-0 flex items-center justify-center">
@@ -167,7 +167,7 @@ const OnboardingWizard = () => {
                     value={formData.address}
                     onChange={(e) => updateFormData('address', e.target.value)}
                     placeholder="123 Main Street"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4CAF50] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5B84B1] focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -179,12 +179,12 @@ const OnboardingWizard = () => {
                     value={formData.zip}
                     onChange={(e) => updateFormData('zip', e.target.value)}
                     placeholder="12345"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4CAF50] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5B84B1] focus:border-transparent"
                   />
                 </div>
               </div>
               
-              <div className="bg-[#A8F483] rounded-lg p-4 text-center">
+              <div className="bg-[#BFD8E2] rounded-lg p-4 text-center">
                 <p className="text-gray-800 font-bold">
                   ✅ Great news! We service your area
                 </p>
@@ -213,7 +213,7 @@ const OnboardingWizard = () => {
                   >
                     -
                   </button>
-                  <div className="text-4xl font-black text-[#4CAF50]">
+                  <div className="text-4xl font-black text-[#5B84B1]">
                     {formData.dogCount === 5 ? '5+' : formData.dogCount}
                   </div>
                   <button
@@ -236,12 +236,12 @@ const OnboardingWizard = () => {
                     onClick={() => updateFormData('plan', plan.id)}
                     className={`relative cursor-pointer rounded-2xl p-6 border-2 transition-all duration-300 ${
                       formData.plan === plan.id
-                        ? 'border-[#4CAF50] bg-[#A8F483]'
+                        ? 'border-[#5B84B1] bg-[#BFD8E2]'
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
                     {plan.popular && (
-                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-[#FF6B6B] text-white px-3 py-1 rounded-full text-xs font-bold">
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-[#E27D60] text-white px-3 py-1 rounded-full text-xs font-bold">
                         POPULAR
                       </div>
                     )}
@@ -261,7 +261,7 @@ const OnboardingWizard = () => {
                       <ul className="space-y-1 text-sm text-gray-600">
                         {plan.features.map((feature, index) => (
                           <li key={index} className="flex items-center gap-2">
-                            <Check size={16} className="text-[#4CAF50]" />
+                            <Check size={16} className="text-[#5B84B1]" />
                             {feature}
                           </li>
                         ))}
@@ -293,7 +293,7 @@ const OnboardingWizard = () => {
                   <select
                     value={formData.serviceDay}
                     onChange={(e) => updateFormData('serviceDay', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4CAF50] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5B84B1] focus:border-transparent"
                   >
                     <option value="">Select a day</option>
                     <option value="monday">Monday</option>
@@ -311,7 +311,7 @@ const OnboardingWizard = () => {
                   <select
                     value={formData.paymentMethod}
                     onChange={(e) => updateFormData('paymentMethod', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4CAF50] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#5B84B1] focus:border-transparent"
                   >
                     <option value="">Select payment method</option>
                     <option value="card">Credit/Debit Card</option>
@@ -372,7 +372,7 @@ const OnboardingWizard = () => {
                 (currentStep === 2 && !formData.plan) ||
                 (currentStep === 3 && (!formData.serviceDay || !formData.paymentMethod))
               }
-              className="flex items-center gap-2 px-6 py-3 bg-[#4CAF50] hover:bg-[#45a049] disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition-all duration-300"
+              className="flex items-center gap-2 px-6 py-3 bg-[#5B84B1] hover:bg-[#4A698B] disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition-all duration-300"
             >
               {currentStep === 3 ? 'Complete Order' : 'Next'}
               {currentStep < 3 && <ChevronRight size={20} />}

@@ -14,7 +14,7 @@ const NavTabs = () => {
         <ul className="flex justify-center gap-6 py-3">
           {tabs.map((tab) => (
             <li key={tab.href}>
-              <a href={tab.href} className="text-gray-700 font-semibold hover:text-[#4CAF50]">
+              <a href={tab.href} className="text-gray-700 font-semibold hover:text-[#5B84B1]">
                 {tab.label}
               </a>
             </li>
