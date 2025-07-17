@@ -8,22 +8,22 @@ const BeforeAfterGallery = () => {
   const galleries = [
     {
       id: 1,
-      title: "Backyard Paradise",
-      location: "Suburban Home",
+      title: "Remove Poo",
+      location: "Carefully clean waste from your lawn",
       before: "🏠❌",
       after: "🏠✅"
     },
     {
       id: 2,
-      title: "Dog Park Corner",
-      location: "Corner Lot",
+      title: "Eco-Frienly Fertilization",
+      location: "Fertalize affected areas, keeping your lawn greener!",
       before: "🌳❌",
       after: "🌳✅"
     },
     {
       id: 3,
-      title: "Patio Perfection",
-      location: "Outdoor Living",
+      title: "Sanitize",
+      location: "Disinfect all tools used after every lawn, ensuring no harmful diseases can spread throuh waste",
       before: "🏡❌",
       after: "🏡✅"
     }
@@ -48,10 +48,10 @@ const BeforeAfterGallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
-            See the Transformation
+            See Our Process
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Drag the slider to reveal the Captain Scoop magic
+            Drag the sliders to view
           </p>
         </div>
 
@@ -163,16 +163,16 @@ const BeforeAfterGallery = () => {
         {/* Bottom stats */}
         <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
           <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="text-3xl font-black text-white mb-2">500+</div>
-            <p className="text-white/90">Yards Transformed</p>
+            <div className="text-3xl font-black text-white mb-2">730,000+</div>
+            <p className="text-white/90">Dogs in Iowa alone!!</p>
           </div>
           <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="text-3xl font-black text-white mb-2">99%</div>
+            <div className="text-3xl font-black text-white mb-2">100%</div>
             <p className="text-white/90">Customer Satisfaction</p>
           </div>
           <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="text-3xl font-black text-white mb-2">24hrs</div>
-            <p className="text-white/90">Average Response Time</p>
+            <div className="text-3xl font-black text-white mb-2">24hrs or Less</div>
+            <p className="text-white/90">Response Time, Always</p>
           </div>
         </div>
       </div>
