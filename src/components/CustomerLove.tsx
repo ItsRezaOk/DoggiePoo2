@@ -14,7 +14,7 @@ const CustomerLove = () => {
       dogs: 3,
       plan: "Twice-Weekly Deluxe",
       video: "🎥",
-      quote: "Captain Scoop saved our sanity! With three golden retrievers, our yard was... well, let's just say it wasn't pristine. Now it's perfect!",
+      quote: "Mr. Scoop saved our sanity! With three golden retrievers, our yard was... well, let's just say it wasn't pristine. Now it's perfect!",
       rating: 5
     },
     {
@@ -55,7 +55,7 @@ const CustomerLove = () => {
     {
       name: "Lisa K.",
       rating: 5,
-      text: "Worth every penny! Our yard went from disaster to paradise. Thank you Captain Scoop! 💚",
+      text: "Worth every penny! Our yard went from disaster to paradise. Thank you Mr. Scoop! 💚",
       date: "2 weeks ago"
     },
     {
@@ -105,7 +105,7 @@ const CustomerLove = () => {
             Customer Love
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Real stories from real customers who chose Captain Scoop
+            Real stories from real customers who chose Mr. Scoop
           </p>
         </div>
 

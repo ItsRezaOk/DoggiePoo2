@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const InteractivePricing = () => {
   const [dogCount, setDogCount] = useState(1);
-  const [savingsMeter, setSavingsMeter] = useState(0);
 
   // Pricing structure
   const weeklyPricing = {
@@ -34,14 +33,7 @@ const InteractivePricing = () => {
     return monthlyStandardTwoVisits - monthlyDeluxe;
   };
 
-  useEffect(() => {
-    const savings = calculateMonthlySavings(dogCount);
-    if (savings > 0) {
-      setSavingsMeter(Math.min(100, (savings / 50) * 100));
-    } else {
-      setSavingsMeter(0);
-    }
-  }, [dogCount]);
+
 
   return (
     <section id="interactive-pricing" className="py-20 bg-gradient-to-br from-[#BFD8E2] to-[#5B84B1]">

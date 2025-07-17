@@ -51,7 +51,7 @@ const BeforeAfterGallery = () => {
             See the Transformation
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Drag the slider to reveal the Captain Scoop magic
+            Drag the slider to reveal the Mr. Scoop magic
           </p>
         </div>
 
