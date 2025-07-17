@@ -34,6 +34,7 @@ const InteractivePricing = () => {
     return monthlyStandardTwoVisits - monthlyDeluxe;
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const savings = calculateMonthlySavings(dogCount);
     if (savings > 0 && dogCount >= 4 && !showConfetti) {
