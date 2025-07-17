@@ -17,13 +17,13 @@ const ComicStrip = () => {
       image: "🔍",
       title: "The Discovery",
       caption: "There's gotta be a better way!",
-      description: "Discovers Captain Scoop online"
+      description: "Discovers Mr. Scoop online"
     },
     {
       id: 3,
       image: "🦸‍♂️",
       title: "The Hero Arrives",
-      caption: "Captain Scoop to the rescue!",
+      caption: "Mr. Scoop to the rescue!",
       description: "Professional crew cleans yard"
     },
     {
@@ -81,7 +81,7 @@ const ComicStrip = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
-            The Captain Scoop Story
+            The Mr. Scoop Story
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             From mess to magnificent in 5 easy steps

@@ -31,7 +31,7 @@ const Footer = () => {
                 <span className="text-2xl">🦸‍♂️</span>
               </div>
               <div>
-                <h3 className="text-2xl font-black text-white">Captain Scoop</h3>
+                <h3 className="text-2xl font-black text-white">Mr. Scoop</h3>
                 <p className="text-white/80">Dog Waste Removal</p>
               </div>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-white/80" />
-                <span className="text-white/80">hello@captainscoop.com</span>
+                <span className="text-white/80">hello@mrscoop.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={16} className="text-white/80" />
@@ -89,7 +89,7 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/70 text-sm">
-              © 2024 Captain Scoop Dog Waste Removal. All rights reserved.
+              © 2024 Mr. Scoop Dog Waste Removal. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-white/70 hover:text-white transition-colors duration-200">Privacy Policy</a>

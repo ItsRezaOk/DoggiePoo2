@@ -66,7 +66,7 @@ const Hero = () => {
               className="relative transform transition-transform duration-500"
               style={{ transform: `translateY(${scrollY * 0.1}px)` }}
             >
-              {/* Captain Scoop */}
+              {/* Mr. Scoop */}
               <div className="relative w-80 h-80 mx-auto mb-8">
                 <div
                   className="absolute inset-0 bg-[#FFCF8B] opacity-20 animate-ping"
@@ -76,7 +76,7 @@ const Hero = () => {
                   className="relative w-full h-full bg-white shadow-2xl flex items-center justify-center"
                   style={{ clipPath: 'polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)' }}
                 >
-                  <div className="text-8xl">🦸‍♂️🐕</div>
+                  <div className="text-8xl">🐶🎩😎</div>
                   <div
                     className={`absolute -top-6 -right-6 w-16 h-16 bg-[#E27D60] flex items-center justify-center text-2xl transition-transform duration-300 ${isWagging ? 'animate-spin' : ''}`}
                     style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}

@@ -30,9 +30,9 @@ const ReferralRewards = () => {
     },
     {
       referrals: 10,
-      reward: 'Captain Badge',
-      description: 'Official Captain Scoop status',
-      icon: '🦸‍♂️',
+      reward: 'Scoop Star',
+      description: 'Official Mr. Scoop status',
+      icon: '🕶️',
       earned: referralCount >= 10
     }
   ];
@@ -40,9 +40,9 @@ const ReferralRewards = () => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Captain Scoop Dog Waste Removal',
+        title: 'Mr. Scoop Dog Waste Removal',
         text: 'Get your first month 50% off with my referral code!',
-        url: `https://captainscoop.com/ref/${referralCode}`
+        url: `https://mrscoop.com/ref/${referralCode}`
       });
     } else {
       navigator.clipboard.writeText(referralCode);
@@ -59,7 +59,7 @@ const ReferralRewards = () => {
             Fetch a Friend Program
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Share the love and earn rewards when your friends join Captain Scoop
+            Share the love and earn rewards when your friends join Mr. Scoop
           </p>
         </div>
 

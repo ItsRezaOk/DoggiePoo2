@@ -51,7 +51,9 @@ const BeforeAfterGallery = () => {
             See Our Process
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Drag the sliders to view
+
+            Drag the slider to reveal the Mr. Scoop magic
+
           </p>
         </div>
 
