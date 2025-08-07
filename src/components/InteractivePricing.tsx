@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 
-const InteractivePricing = () => {
+interface InteractivePricingProps {
+  isFirstTimeSubscriber?: boolean;
+}
+
+const InteractivePricing: React.FC<InteractivePricingProps> = ({
+  isFirstTimeSubscriber = false,
+}) => {
   const [dogCount, setDogCount] = useState(1);
 
   // Pricing structure
@@ -88,6 +94,12 @@ const InteractivePricing = () => {
                 <p className="text-sm text-gray-600 mt-2">
                   Monthly: ${calculateWeeklyPrice(dogCount) * 4}
                 </p>
+                <p className="text-xs text-gray-500">Billed monthly</p>
+                {isFirstTimeSubscriber && (
+                  <p className="text-xs text-green-600">
+                    First week free when you pay for a month
+                  </p>
+                )}
               </div>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2">
@@ -120,7 +132,13 @@ const InteractivePricing = () => {
                 <p className="text-sm text-gray-600 mt-2">
                   Monthly: ${calculateTwiceWeeklyPrice(dogCount) * 4}
                 </p>
-                
+                <p className="text-xs text-gray-500">Billed monthly</p>
+                {isFirstTimeSubscriber && (
+                  <p className="text-xs text-green-600">
+                    First week free when you pay for a month
+                  </p>
+                )}
+
                 {calculateMonthlySavings(dogCount) > 0 && (
                   <div className="mt-2 text-green-600 font-bold">
                     You save ${calculateMonthlySavings(dogCount)}/month!
