@@ -20,6 +20,7 @@ import LogoBanner from './components/LogoBanner';
 function App() {
   const [showExitPopup, setShowExitPopup] = useState(false);
   const [showPawCursor, setShowPawCursor] = useState(false);
+  const [isFirstTimeSubscriber, setIsFirstTimeSubscriber] = useState(false);
   const exitPopupTriggeredRef = useRef(false);
 
   useEffect(() => {
@@ -45,6 +46,14 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const hasSubscribed = localStorage.getItem('hasSubscribed');
+    if (!hasSubscribed) {
+      setIsFirstTimeSubscriber(true);
+      localStorage.setItem('hasSubscribed', 'true');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FFF8F2] relative overflow-x-hidden">
       {showPawCursor && <PawCursor />}
@@ -55,11 +64,11 @@ function App() {
       <About />
       <ComicStrip />
       <HowItWorks />
-      <InteractivePricing />
-      <ServiceCards />
+      <InteractivePricing isFirstTimeSubscriber={isFirstTimeSubscriber} />
+      <ServiceCards isFirstTimeSubscriber={isFirstTimeSubscriber} />
       <DeluxeSpotlight />
       <BeforeAfterGallery />
-      <OnboardingWizard />
+      <OnboardingWizard isFirstTimeSubscriber={isFirstTimeSubscriber} />
       <ReferralRewards />
       <FAQ />
       <Footer />

@@ -2,10 +2,12 @@ import React from 'react';
 import { Check, Star, Zap, Crown, Footprints } from 'lucide-react';
 
 interface ServiceCardsProps {
-  isFirstTime?: boolean;
+  isFirstTimeSubscriber?: boolean;
 }
 
-const ServiceCards: React.FC<ServiceCardsProps> = ({ isFirstTime = false }) => {
+const ServiceCards: React.FC<ServiceCardsProps> = ({
+  isFirstTimeSubscriber = false,
+}) => {
   const services = [
     {
       name: "Basic Weekly",
@@ -146,7 +148,13 @@ const ServiceCards: React.FC<ServiceCardsProps> = ({ isFirstTime = false }) => {
                     </span>
                     <span className="text-sm text-gray-600">/{service.period}</span>
                   </div>
-                  
+                  <p className="text-xs text-gray-500">Billed monthly</p>
+                  {isFirstTimeSubscriber && (
+                    <p className="text-xs text-green-600">
+                      First week free when you pay for a month
+                    </p>
+                  )}
+
                   <p className="text-sm text-gray-600">
                     {service.description}
                   </p>

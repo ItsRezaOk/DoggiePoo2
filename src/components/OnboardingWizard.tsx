@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { ChevronRight, ChevronLeft, MapPin, Users, Calendar, Check } from 'lucide-react';
 
 interface OnboardingWizardProps {
-  isFirstTime?: boolean;
+  isFirstTimeSubscriber?: boolean;
 }
 
-const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isFirstTime = false }) => {
+const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
+  isFirstTimeSubscriber = false,
+}) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     address: '',
@@ -266,16 +268,16 @@ const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isFirstTime = false
                       ${plan.price}
                       <span className="text-sm font-normal text-gray-600">/{plan.period}</span>
                     </div>
-                      <p className="text-sm text-gray-600 mb-4">
-                        {plan.description}
+                    <p className="text-xs text-gray-500">Billed monthly</p>
+                    {isFirstTimeSubscriber && (
+                      <p className="text-xs text-green-600">
+                        First week free when you pay for a month
                       </p>
-
-                      {plan.id === 'ala-carte-walk' && isFirstTime && (
-                        <p className="text-sm font-bold text-[#E27D60] mb-4">
-                          First walk: $10 for 30 min
-                        </p>
-                      )}
-
+                    )}
+                    <p className="text-sm text-gray-600 mb-4">
+                      {plan.description}
+                    </p>
+                      
                       <ul className="space-y-1 text-sm text-gray-600">
                         {plan.features.map((feature, index) => (
                           <li key={index} className="flex items-center gap-2">
@@ -354,19 +356,35 @@ const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isFirstTime = false
                     <span>Plan:</span>
                     <span>{plans.find(p => p.id === formData.plan)?.name}</span>
                   </div>
-                  <div className="flex justify-between font-bold text-gray-800">
-                    <span>Total (monthly):</span>
-                    <span>
-                      {
-                        (() => {
-                          const plan = plans.find(p => p.id === formData.plan);
-                          if (!plan) return '$0';
-                          const multiplier = plan.period === 'week' ? 4 : 1;
-                          return `$${plan.price * multiplier}`;
-                        })()
-                      }
-                    </span>
-                  </div>
+                  {
+                    (() => {
+                      const plan = plans.find(p => p.id === formData.plan);
+                      if (!plan) return null;
+                      const multiplier = plan.period === 'week' ? 4 : 2;
+                      const monthly = plan.price * multiplier;
+                      const credit = isFirstTimeSubscriber ? plan.price : 0;
+                      const total = monthly - credit;
+                      return (
+                        <>
+                          <div className="flex justify-between">
+                            <span>Plan price:</span>
+                            <span>${monthly}</span>
+                          </div>
+                          {isFirstTimeSubscriber && (
+                            <div className="flex justify-between text-green-600">
+                              <span>First week free</span>
+                              <span>- ${plan.price}</span>
+                            </div>
+                          )}
+                          <div className="flex justify-between font-bold text-gray-800">
+                            <span>Total (due today):</span>
+                            <span>${total}</span>
+                          </div>
+                        </>
+                      );
+                    })()
+                  }
+                  <p className="text-xs text-gray-500 mt-2">Billed monthly</p>
                 </div>
               </div>
             </div>
