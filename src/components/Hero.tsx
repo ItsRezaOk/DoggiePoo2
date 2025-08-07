@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Play } from 'lucide-react';
+import { INTRO_WALK_PROMO, FIRST_WEEK_FREE_PROMO } from '../constants/promotions';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -50,13 +51,24 @@ const Hero = () => {
                 <span className="relative z-10">Start My Plan</span>
                 <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
               </button>
-              <button 
+              <button
                 onClick={scrollToStory}
                 className="group flex items-center gap-2 px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold text-lg rounded-full transition-all duration-300 backdrop-blur-sm"
               >
                 <Play size={20} />
                 See the Story
               </button>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 mt-6 text-sm sm:text-base">
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-3 rounded-xl backdrop-blur-sm text-white">
+                <span className="text-xl">🐾</span>
+                <span>{INTRO_WALK_PROMO}</span>
+              </div>
+              <div className="flex items-center gap-2 bg-[#FFCF8B] px-4 py-3 rounded-xl text-gray-800 font-semibold">
+                <span className="text-xl">🎉</span>
+                <span>{FIRST_WEEK_FREE_PROMO}</span>
+              </div>
             </div>
           </div>
 

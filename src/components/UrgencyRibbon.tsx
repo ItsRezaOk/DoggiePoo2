@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, X } from 'lucide-react';
+import { COMBINED_PROMO } from '../constants/promotions';
 
 const UrgencyRibbon = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -45,15 +46,15 @@ const UrgencyRibbon = () => {
     <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#E27D60] to-[#C85A5A] text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-              <Clock size={16} className="animate-pulse" />
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <Clock size={16} className="animate-pulse" />
+              </div>
+              <div className="flex items-center gap-2 text-sm sm:text-base">
+                <span className="font-bold">Limited Time:</span>
+                <span>{COMBINED_PROMO}</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-sm sm:text-base">
-              <span className="font-bold">Limited Time:</span>
-              <span>Book by Tuesday 8 PM for Wednesday service pickup!</span>
-            </div>
-          </div>
           
           <div className="flex items-center gap-4">
             {/* Countdown */}
