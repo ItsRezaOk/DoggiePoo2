@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { ChevronRight, ChevronLeft, MapPin, Users, Calendar, Check } from 'lucide-react';
 
-const OnboardingWizard = () => {
+interface OnboardingWizardProps {
+  isFirstTime?: boolean;
+}
+
+const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isFirstTime = false }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     address: '',
@@ -66,6 +70,14 @@ const OnboardingWizard = () => {
       description: 'Unlimited dogs, premium service',
       features: ['Twice-weekly service', 'Unlimited dogs', 'Deep sanitization', 'Free dispenser'],
       popular: true
+    },
+    {
+      id: 'ala-carte-walk',
+      name: 'Ala-Carte Walk',
+      price: 25.5,
+      period: 'hour',
+      description: 'One-hour private walk',
+      features: ['Private walk', 'Flexible scheduling']
     }
   ];
 
@@ -229,7 +241,7 @@ const OnboardingWizard = () => {
               </div>
 
               {/* Plan Selection */}
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-3 gap-4">
                 {plans.map((plan) => (
                   <div
                     key={plan.id}
@@ -257,7 +269,13 @@ const OnboardingWizard = () => {
                       <p className="text-sm text-gray-600 mb-4">
                         {plan.description}
                       </p>
-                      
+
+                      {plan.id === 'ala-carte-walk' && isFirstTime && (
+                        <p className="text-sm font-bold text-[#E27D60] mb-4">
+                          First walk: $10 for 30 min
+                        </p>
+                      )}
+
                       <ul className="space-y-1 text-sm text-gray-600">
                         {plan.features.map((feature, index) => (
                           <li key={index} className="flex items-center gap-2">
@@ -343,7 +361,7 @@ const OnboardingWizard = () => {
                         (() => {
                           const plan = plans.find(p => p.id === formData.plan);
                           if (!plan) return '$0';
-                          const multiplier = plan.period === 'week' ? 4 : 2;
+                          const multiplier = plan.period === 'week' ? 4 : 1;
                           return `$${plan.price * multiplier}`;
                         })()
                       }
