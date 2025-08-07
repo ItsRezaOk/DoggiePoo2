@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const InteractivePricing = () => {
+interface InteractivePricingProps {
+  isFirstTime?: boolean;
+}
+
+const InteractivePricing: React.FC<InteractivePricingProps> = ({ isFirstTime = false }) => {
   const [dogCount, setDogCount] = useState(1);
 
   // Pricing structure
@@ -76,7 +80,7 @@ const InteractivePricing = () => {
           </div>
 
           {/* Pricing Comparison */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Weekly Basic */}
             <div className="bg-gray-50 rounded-2xl p-6">
               <div className="text-center mb-4">
@@ -144,6 +148,31 @@ const InteractivePricing = () => {
                 <li className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>
                   Free waste bag dispenser
+                </li>
+              </ul>
+            </div>
+            {/* Ala-Carte Walk */}
+            <div className="bg-white rounded-2xl p-6">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-800 mb-2">Ala-Carte Walk</h4>
+                <div className="text-3xl font-black text-gray-800">
+                  $25.5
+                  <span className="text-sm font-normal text-gray-600">/hour</span>
+                </div>
+                {isFirstTime && (
+                  <p className="mt-2 text-sm font-bold text-[#E27D60]">
+                    First walk: $10 for 30 min
+                  </p>
+                )}
+              </div>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <span className="text-green-500">✓</span>
+                  Private one-on-one walk
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-500">✓</span>
+                  Flexible scheduling
                 </li>
               </ul>
             </div>
