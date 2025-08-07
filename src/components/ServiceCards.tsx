@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Star, Zap, Crown } from 'lucide-react';
+import { Check, Star, Zap, Crown, Footprints } from 'lucide-react';
 
 interface ServiceCardsProps {
   isFirstTimeSubscriber?: boolean;
@@ -61,6 +61,22 @@ const ServiceCards: React.FC<ServiceCardsProps> = ({
       popular: false
     },
     {
+      name: "Ala-Carte Walk",
+      subtitle: "On-Demand",
+      price: 25.5,
+      period: "hour",
+      description: "One-hour private dog walk",
+      features: [
+        "Flexible scheduling",
+        "Individual attention",
+        "On-leash safety",
+        "Water refresh"
+      ],
+      color: "from-[#C3F0CA] to-[#7BC67B]",
+      icon: Footprints,
+      popular: false
+    },
+    {
       name: "Twice-Weekly Deluxe",
       subtitle: "Add-On",
       price: 8.75,
@@ -93,7 +109,7 @@ const ServiceCards: React.FC<ServiceCardsProps> = ({
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             
@@ -142,6 +158,11 @@ const ServiceCards: React.FC<ServiceCardsProps> = ({
                   <p className="text-sm text-gray-600">
                     {service.description}
                   </p>
+                  {service.name === 'Ala-Carte Walk' && isFirstTime && (
+                    <p className="mt-2 text-sm font-bold text-[#E27D60]">
+                      First walk: $10 for 30 min
+                    </p>
+                  )}
                 </div>
 
                 {/* Features */}

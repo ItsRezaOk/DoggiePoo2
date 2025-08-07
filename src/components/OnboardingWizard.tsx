@@ -72,6 +72,14 @@ const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
       description: 'Unlimited dogs, premium service',
       features: ['Twice-weekly service', 'Unlimited dogs', 'Deep sanitization', 'Free dispenser'],
       popular: true
+    },
+    {
+      id: 'ala-carte-walk',
+      name: 'Ala-Carte Walk',
+      price: 25.5,
+      period: 'hour',
+      description: 'One-hour private walk',
+      features: ['Private walk', 'Flexible scheduling']
     }
   ];
 
@@ -235,7 +243,7 @@ const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
               </div>
 
               {/* Plan Selection */}
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-3 gap-4">
                 {plans.map((plan) => (
                   <div
                     key={plan.id}
